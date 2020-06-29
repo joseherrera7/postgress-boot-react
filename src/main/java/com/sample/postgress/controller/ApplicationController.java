@@ -28,6 +28,12 @@ public class ApplicationController {
 	
 	}
 	
+
+	@RequestMapping(value = "/")
+	public String index() {
+		return "index";
+	}
+
 	@PostMapping(value = "/createEmp")
 	public void createEmployee(@RequestBody Employee emp) {
 		 employeeService.insertEmployee(emp);
